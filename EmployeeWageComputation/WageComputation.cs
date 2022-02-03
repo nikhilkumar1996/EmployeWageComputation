@@ -8,11 +8,11 @@ namespace EmployeeWageComputation
 {
     public class WageComputation
     {
-        const int Full_Day_Hr = 8, Total_Working_Days = 20, WagePerHr = 20,Part_Time_Hr=4, empPresent = 1, empNotPresent = 0, empPartTime = 2;
-        int DailyEmpWage, PartTimeEmpWage,empHrs=0;
+        const int Total_Working_Hrs = 100, Full_Day_Hr = 8, Total_Working_Days = 20, WagePerHr = 20,Part_Time_Hr=4, empPresent = 1, empNotPresent = 0, empPartTime = 2;
+        int empHrs=0;
         public void CalculateEmpWage()
         {
-            for (int i = 0; i < Total_Working_Days; i++)
+            for (int i = 0; i < Total_Working_Days && this.empHrs <= Total_Working_Hrs; i++)
             {
                 Random random = new Random();
                 int empCheck = random.Next(0, 3);
