@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EmployeeWageComputation
 {
-    public class WageComputation
+    public class WageComputation //RefactorCode using Class
     {
         const int Total_Working_Hrs = 100, Full_Day_Hr = 8, Total_Working_Days = 20, WagePerHr = 20,Part_Time_Hr=4, empPresent = 1, empNotPresent = 0, empPartTime = 2;
         int empHrs=0;
