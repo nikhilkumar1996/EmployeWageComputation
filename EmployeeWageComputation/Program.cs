@@ -10,7 +10,7 @@ namespace EmployeWageComputation
             WageComputation WC = new WageComputation();
             WC.CalculateEmpWage("Tata Consultancy Services", 80, 12, 90);
             WageComputation WC1 = new WageComputation();
-            WC1.CalculateEmpWage("Infosys", 55, 22, 110);
+            WC1.CalculateEmpWage("Tata Motors", 55, 22, 110);
             WageComputation WC2 = new WageComputation();
             WC.CalculateEmpWage("Google", 78, 32, 120);
 

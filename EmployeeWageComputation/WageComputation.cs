@@ -54,7 +54,7 @@ namespace EmployeeWageComputation
             int totalWorkingHrs = empHrs;
             
 
-            Console.WriteLine("Company Name:" + company);
+            Console.WriteLine("Company Name:"+ company);
             Console.WriteLine("Total Working Hours :" + totalWorkingHrs);
             Console.WriteLine("Employee Wage Per day :" + empDailyWage);
             Console.WriteLine("Working days in a month :" + workingDays);
