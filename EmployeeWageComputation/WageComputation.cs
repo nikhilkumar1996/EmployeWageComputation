@@ -6,13 +6,19 @@ using System.Threading.Tasks;
 
 namespace EmployeeWageComputation
 {
-    public class WageComputation //RefactorCode using Class
+    public class WageComputation 
     {
-        const int Total_Working_Hrs = 100, Full_Day_Hr = 8, Total_Working_Days = 20, WagePerHr = 20,Part_Time_Hr=4, empPresent = 1, empNotPresent = 0, empPartTime = 2;
+       const int  empPresent = 1, empPartTime = 2;
+        const int Full_Day_Hr = 8,Part_Time_Hr = 4;
         int empHrs=0;
-        public void CalculateEmpWage()
+        public void CalculateEmpWage(string company, int wage_per_hour, int max_working_days, int maxHoursPerMonth)
         {
-            for (int i = 0; i < Total_Working_Days && this.empHrs <= Total_Working_Hrs; i++)
+            
+            int empDailyWage = 0;
+            int workingDays = 1;
+            int workingHrs = 0;
+            
+            while (workingDays <= max_working_days && workingHrs <= maxHoursPerMonth)
             {
                 Random random = new Random();
                 int empCheck = random.Next(0, 3);
@@ -37,10 +43,24 @@ namespace EmployeeWageComputation
 
 
                 }
+                if(empCheck != 0)
+                {
+                    workingDays++;
+                }
+                empDailyWage = empHrs * wage_per_hour;
 
             }
-            int totalEmpWage = empHrs * WagePerHr;
-            Console.WriteLine("Total Employee Wage For a Month ="+totalEmpWage);
+            int totalEmpWage = empHrs * wage_per_hour;
+            int totalWorkingHrs = empHrs;
+            
+
+            Console.WriteLine("Company Name:" + company);
+            Console.WriteLine("Total Working Hours :" + totalWorkingHrs);
+            Console.WriteLine("Employee Wage Per day :" + empDailyWage);
+            Console.WriteLine("Working days in a month :" + workingDays);
+            Console.WriteLine("Employee Wage for 20 working days :" + totalEmpWage);
+
+
 
 
 
